@@ -1,0 +1,21 @@
+# Ambientes e cache do Python
+env/
+.venv/
+__pycache__/
+*.py[cod]
+
+# ModuleOne BIMtoPC
+ModuleOne BIMtoPC/ifc2x3/
+ModuleOne BIMtoPC/Modelos/
+ModuleOne BIMtoPC/Python/resultado*/
+
+# ModuleTwo RandlaNET
+ModuleTwo RandlaNET/DATASET/
+ModuleTwo RandlaNET/logs/
+ModuleTwo RandlaNET/Open3D-ML/
+ModuleTwo RandlaNET/Python/*log*/
+
+# ModuleTwo Registration
+ModuleTwo Registration/AsBuilt/
+
+*.ply
