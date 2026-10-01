@@ -1,3 +1,4 @@
+import torch
 import open3d.ml.torch as ml3d
 from dataset_ponte import PonteDataset
 
@@ -29,7 +30,7 @@ pipeline = ml3d.pipelines.SemanticSegmentation(
     scheduler_gamma=0.95,
     num_workers=0,
     main_log_dir="./logs_ponte",
-    device="cuda"
+    device="cuda" if torch.cuda.is_available() else "cpu"
 )
 
 print("Iniciando o treinamento na GPU...")

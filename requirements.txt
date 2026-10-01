@@ -1,0 +1,15 @@
+# Commun
+numpy>=1.24,<2.0
+open3d>=0.18
+
+# Module 1: BIMtoPC
+ifcopenshell>=0.8
+pandas>=2.0
+
+# Module 2: RandLA-Net (Open3D-ML)
+plyfile>=1.0
+tensorboard
+tqdm
+pyyaml
+addict
+scikit-learn

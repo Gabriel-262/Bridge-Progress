@@ -1,3 +1,4 @@
+import torch
 import open3d.ml.torch as ml3d
 from dataset_ponte import PonteDataset
 
@@ -18,7 +19,7 @@ model = ml3d.models.RandLANet(
 pipeline = ml3d.pipelines.SemanticSegmentation(
     model=model,
     dataset=dataset,
-    device="cuda"
+    device="cuda" if torch.cuda.is_available() else "cpu"
 )
 
 # 4. CARREGA O CÉREBRO TREINADO (A Época 50)

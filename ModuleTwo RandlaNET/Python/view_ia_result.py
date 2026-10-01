@@ -1,3 +1,4 @@
+import torch
 import numpy as np
 import open3d as o3d
 import open3d.ml.torch as ml3d
@@ -17,7 +18,7 @@ model = ml3d.models.RandLANet(
 pipeline = ml3d.pipelines.SemanticSegmentation(
     model=model,
     dataset=dataset,
-    device="cuda"
+    device="cuda" if torch.cuda.is_available() else "cpu"
 )
 
 # Carrega os pesos da Época 50
